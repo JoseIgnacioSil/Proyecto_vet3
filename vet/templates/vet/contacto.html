@@ -1,0 +1,168 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="{% static 'vet/css/estilosL.css'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/estilos.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'vet/img/logito.png'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/style.css'%}">
+
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header>
+        <p></p>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="{% static 'vet/img/logo.png'%}" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="{% url 'index' %}">inicio</a>
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    <a href="{% url 'registro' %}">registro</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+
+            </div>
+
+            <body>
+
+                <div class="contenedorL">
+
+                    <form class="well form-horizontal" action=" " method="post" id="contact_form">
+                        <fieldset>
+
+
+                            <h2>Contactanos</h2>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Nombre Completo</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input name="first_name" placeholder="Nombres y Apellidos" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Gmail</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input name="email" placeholder="Correo electronico" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Número </label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                        <input name="phone" placeholder="9 12345678" class="form-control" type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Local</label>
+                                <div class="col-md-4 selectContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                        <select name="state" class="form-control selectpicker">
+                  <option value=" " >seleciones un local</option>
+                  <option>Viña del mar</option>
+                  <option>Valparaiso</option>
+                </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+
+                            <!-- Text area -->
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Describa su duda</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                        <textarea class="form-control" name="comentarios" placeholder=" Escriba el texto aqui."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success message -->
+                            <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-warning">Enviar <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+
+
+
+            </body>
+
+
+
+</body>
+</nav>
+</header>
+<main>
+
+</main>
+<footer id="contacto">
+    <div class="footer contenedor">
+        <div class="marca-logo">
+            <img src="{% static 'vet/img/logo.png'%}" alt="">
+
+        </div>
+        <div class="iconos">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+            />
+
+
+        </div>
+        <p class="contactof">Contactenos por alguna de nuestras redes sociales</p>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'vet/js/jquery.js'%}"></script>
+    <script src="{% static 'vet/js/main.js'%}"></script>
+    <script src="{% static 'vet/js/filtro.js'%}"></script>
+    <script src="{% static 'vet/js/script.js'%}"></script>
+    <script src="{% static 'vet/js/scriptboton.js'%}"></script>
+    <script src="{% static 'vet/js/formularioL.js'%}"></script>
+    <script src="{% static 'vet/js/formularioLO.js'%}"></script>
+    </body>
+
+</html>

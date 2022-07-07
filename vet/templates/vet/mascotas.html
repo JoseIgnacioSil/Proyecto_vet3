@@ -1,0 +1,108 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificar Mascota</title>
+
+    <link rel="stylesheet" href="{% static 'vet/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/interfaz.css'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/botones/style.css'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/estilos.css'%}">
+    <link rel="stylesheet" href="{% static 'vet/css/style.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'vet/img/logito.png'%}">
+
+</head>
+
+<body class="hidden">
+
+    <div class="centrado" id="onload">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header>
+        <p></p>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="{% static 'vet/img/logo.png'%}" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="{% url 'index' %}">inicio</a>
+                    <a href="{% url 'galeria' %}">galeria</a>
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    <a href="{% url 'login' %}">login</a>
+                    <a href="{% url 'registro' %}">registro</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+
+            </div>
+
+            <body>
+                <div class="contenedorR">
+                    <div class="contenedor">
+                        <h1>Categorias animales</h1>
+
+                        <div class="contenedor-botones">
+
+                            {% if perms.vet.add_mascota %}
+                            <a button class="btn btn-3 hover-border-5" input type="submit" class="btn btn-primary" value="Enviar" 
+                            href="{% url 'agregar_mascota' %}"><span>Agregar mascota</span></a>
+                            {%endif%}
+                            {% if perms.vet.view_mascota %}
+                            <a button class="btn btn-3 hover-border-5" input type="submit" class="btn btn-primary" value="Enviar"
+                            href="{% url 'listado_adopcion' %}"><span>Lista de adopcion</span></a>
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </body>
+
+
+            </div>
+            </form>
+            </div>
+</body>
+</div>
+</main>
+</body>
+</nav>
+</header>
+
+<footer id="contacto">
+    <div class="footer contenedor">
+        <div class="marca-logo">
+            <img src="{% static 'vet/img/logo2.png'%}" alt="">
+
+        </div>
+        <div class="iconos">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+            />
+
+
+        </div>
+    </div>
+
+
+    <script src="{% static 'vet/js/jquery.js'%}"></script>
+    <script src="{% static 'vet/js/main.js'%}"></script>
+    <script src="{% static 'vet/js/filtro.js'%}"></script>
+    <script src="{% static 'vet/css/script'%}"></script>
+
+    </body>
+
+</html>

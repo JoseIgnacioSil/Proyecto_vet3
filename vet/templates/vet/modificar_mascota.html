@@ -1,0 +1,134 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modificar Mascota</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="{% static 'vet/css/estilos.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'vet/img/logito.png'%}">
+
+</head>
+
+<body class="hidden">
+
+    <div class="centrado" id="onload">
+        <div class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <header>
+        <p></p>
+        <nav id="nav" class="nav1">
+            <div class="contenedor-nav">
+                <div class="logo">
+                    <img src="{% static 'vet/img/logo.png'%}" alt="">
+                </div>
+                <div class="enlaces" id="enlaces">
+                    <a href="{% url 'index' %}">inicio</a>
+                    <a href="{% url 'galeria' %}">galeria</a>
+                    <a href="{% url 'contacto' %}">contacto</a>
+                    <a href="{% url 'login' %}">login</a>
+                    <a href="{% url 'registro' %}">registro</a>
+                </div>
+                <div class="icono" id="open">
+                    <span>&#9776;</span>
+                </div>
+
+            </div>
+
+            <body>
+                <main>
+                    <div class="contenedorM">
+
+                        <body>
+
+                            <div class="container my-3">
+                                <div class="row">
+
+                                    <h2>MODIFICANDO </h2>
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+
+                                            <body>
+                                                <div class="row">
+                                                    <form action="" method="POST" id="formulario">
+                                                        {% csrf_token %}
+                                                        <div class="form-group">
+                                                            {{form.as_table}}
+                                                        </div>
+
+
+                                                        <div id="exito" class="alert alert-success" role="alert">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                            <input type="submit" class="btn btn-primary" value="Modificar">
+
+                                                            <input type="reset" class="btn btn-danger" value="Limpiar">
+                                                            <i class="fa-duotone fa-eraser"></i>
+
+                                                        </div>
+                                                        {{mensaje}}
+
+                                                        <div id="error" class="alert alert-danger" role="alert">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </body>
+                                            </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Bootstrap -->
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                    </body>
+
+
+                    </div>
+                    </form>
+                    </div>
+            </body>
+            </div>
+            </main>
+</body>
+</nav>
+</header>
+<main>
+
+</main>
+<footer id="contacto">
+    <div class="footer contenedor">
+        <div class="marca-logo">
+            <img src="{% static 'vet/img/logo2.png'%}" alt="">
+
+        </div>
+        <div class="iconos">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-solid fa-envelope"></i>
+
+
+
+        </div>
+        <p class="contactof">Contactenos por alguna de nuestras redes sociales</p>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{% static 'vet/js/jquery.js'%}"></script>
+    <script src="{% static 'vet/js/main.js'%}"></script>
+    <script src="{% static 'vet/js/filtro.js'%}"></script>
+    <script src="{% static 'vet/js/script.js'%}"></script>
+
+    </body>
+
+</html>
